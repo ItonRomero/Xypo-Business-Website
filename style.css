@@ -1,11 +1,13 @@
 :root {
+  --clr-accent-350: #fab3c5;
   --clr-accent-400: #f67c92;
+   
 
   --clr-neutral-100: #FFF;
  
 
   --clr-neutral-700: #777;
-
+  --clr-neutral-750: #797979;
 
 
   --clr-foreground-light: var(--clr-neutral-100);
@@ -17,23 +19,14 @@
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-primary);
 
-  --fw-ligt: 300;
-  --fw-regular: 400;
-  --fw-light-bold: 500;
-  --fw-semi-bold: 600;
-  --fw-bold: 700;
-  --fw-lg-bold: 800;
-
-  --fs-300: 15px;
   
+  --fs-300: 15px;
   --fs-700: 34px;
  
  
   --fs-primary-heading: var(--fs-700);
   --fs-secondary-heading: var(--fs-500);
-  --fs-nav: var(--fs-400);
-  --fs-body: var(--fs-300);
-  --fs-desc: var(15px);
+  --fs-desc: var(--fs-300);
   --fs-button: var(--fs-300);
 }
 
@@ -104,54 +97,16 @@ svg {
 }
 
 /* --- UTILITY CLASSES --  */
-.container {
-  max-width: 1800px;
-  margin: auto;
-  padding: 0 25px;
-}
 
-/* --- HEADER SECTION --- */
-#header {
-  height: 100vh;
-  background-image: url(images/background.png);
-  background-position: center;
-  background-size: cover;
-}
-#header .logo {
-  margin-top: 30px; 
-  width: 100px;
-}
-#header .header-text {
-  max-width: 350px;
-  margin-top: 140px;
-}
-#header h1 {
-  font-size: var(--fs-primary-heading);
-}
-#header p {
-  font-size: var(--fs-desc);
-  line-height: 18px;
-  color: var(--clr-foreground-semi-light);
-}
-#header .square {
+
+.square {
   height: 12px;
   width: 12px;
   display: inline-block;
   background: var(--clr-accent-400);
   margin: 15px 0;
 }
-#header .common-btn {
-  padding: 18px 40px;
-  background: transparent;
-  outline: none;
-  border: 2px solid var(--clr-accent-400);
-  font-weight: bold;
-  cursor: pointer;
-}
-#header button {
-  margin-top: 20px;
-  margin-bottom: 60px;
-}
+
 .line-1 {
   width: 15px;
   height: 15px;
@@ -173,6 +128,50 @@ svg {
 .line {
   line-height: 8px;
 }
+
+
+/* --- HEADER SECTION --- */
+#header {
+  height: 100vh;
+  background-image: url(images/background.png);
+  background-position: center;
+  background-size: cover;
+}
+.container {
+  margin-right: 100px;
+  margin-left: 100px; 
+}
+
+#header .logo {
+  margin-top: 30px; 
+  width: 100px;
+}
+#header .header-text {
+  max-width: 350px;
+  margin-top: 140px;
+}
+h1 {
+  font-size: var(--fs-primary-heading);
+}
+p {
+  font-size: var(--fs-desc);
+  line-height: 18px;
+  color: var(--clr-foreground-semi-light);
+}
+
+.common-btn {
+  padding: 18px 40px;
+  background: transparent;
+  outline: none;
+  border: 2px solid var(--clr-accent-400);
+  font-weight: bold;
+  cursor: pointer;
+}
+#header button {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
 
 
 /* --- SIDE NABVAR SECTION --- */
@@ -200,4 +199,291 @@ svg {
   top: 35px;
   z-index: 2;
   cursor: pointer;
+}
+
+
+/* --- ABOUT SECTION --- */
+#about, #offer {
+  padding: 100px 0;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-left-col {
+  flex-basis: 50%;
+}
+.about-left-col img{
+  width: 100%;
+}
+.about-right-col {
+  flex-basis: 50%;
+  text-align: right;
+}
+.about-text {
+  max-width: 500px;
+  margin-right: 100px ;
+  display: inline-block;
+}
+.about-text h2 {
+  margin: 50px 0 10px;
+  font-size: 28px;
+  font-style: italic;
+}
+.about-text h3 {
+  font-size: 20x;
+  font-style: italic;
+  color: var(--clr-neutral-750);
+}
+
+
+/* --- FEATURES SECTION --- */
+#features {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.feature-row {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.feature-col {
+  flex-basis: 25%;
+  text-align: center;
+}
+.feature-col img {
+  width: 100PX;
+}
+.feature-col h4 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.feature-btn {
+  margin: 80px auto 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.feature-btn .line {
+  text-align: right;
+  display: inline-block;
+  margin-right: 25px;
+}
+
+
+/* --- COURSE SECTION --- */
+#courses {
+  padding: 100px 0;
+}
+.course-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.course-right-col {
+  flex-basis: 50%;
+}
+.course-left-col {
+    flex-basis: 50%;
+}
+.course-text {
+  max-width: 350px;
+}
+.course-text button {
+  margin: 30px 0;
+}
+
+
+/* --- OFFER SECTION --- */
+#offer button{
+  margin: 30px 0;
+}
+
+/* --- CONTACT SECTION --- */
+.contact-row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact-left-col,
+.contact-right-col {
+ flex-basis: 50%;
+} 
+form {
+  max-width: 350px;
+  margin: 30px 0;
+}
+form input {
+  width: 100%;
+  padding: 12px 10px;
+  margin-bottom: 5px;
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  border: 2px solid var(--clr-accent-350);
+}
+.btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-box button {
+  flex-basis: 48%;
+  padding: 18px 0;
+}
+
+
+/* --- FOOTER SECTION --- */
+#footer {
+  padding: 50px 0 30px;
+}
+hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--clr-accent-400);
+}
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-left-col {
+  flex-basis: 50%;
+  margin-top: 60px;
+}
+.footer-right-col {
+  flex-basis: 35%;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.link-title h4 {
+  color: var(--clr-accent-350);
+  margin-bottom: 20px;
+}
+.link-title  small {
+  font-size: 13px;
+  color: var(--clr-neutral-700);
+}
+.footer-info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-logo img {
+  width: 100px;
+}
+.footer-logo button {
+  padding: 12px 28px;
+  margin-top: 20px;
+  font-size: 10px;
+}
+.copyright-text,
+.footer-logo {
+  flex-basis: 40%;
+}
+
+/* --- SOCIAL-ICONS SECTION --- */
+.social-icons {
+  width: 50px;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.social-icons img {
+  display: block;
+  width: 20px;
+  margin: 0 auto 20px;
+  cursor: pointer;
+}
+
+
+
+/* --- MEDIA QUARIES --- */
+@media only screen and (max-width: 770px) {
+  /* HOME  */
+  #header {
+    background-image: none;
+  }
+  .container {
+  margin-right: 50px;
+  margin-left: 50px; 
+  }
+  #header .logo {
+    margin-top: 27px; 
+    width: 70px;
+  }
+  #header .header-text {
+    margin-top: 100px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  #menuBtn {
+  width: 40px;
+  right: 50px;
+  }
+  .common-btn {
+  padding: 10px 16px;
+  }
+  /* SOCIAL_ICONS  */
+  .social-icons img {
+  width: 14px;
+  margin: 15px auto;
+  }
+
+   /* ABOUT  */
+  .about-left-col,
+  .about-right-col {
+  flex-basis: 100%;
+  }
+  .about-text {
+  margin: 50px 50px 0;
+  }
+  .about-text h2 {
+  font-size: 18px;
+  }
+
+  /* FEATURE  */
+  .feature-col {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* COURSE  */
+  .course-left-col{
+    flex-basis: 100%;
+  }
+  .course-right-col {
+    flex-basis: 100%;
+    margin-top: 70px;
+  }
+
+  /* CONTACT  */
+  .contact-left-col,
+  .contact-right-col {
+  flex-basis: 100%;
+  } 
+  .contact-right-col {
+    margin-top: 50px;
+  }
+
+  /* FOOTER  */
+  .footer-left-col,
+  .footer-right-col {
+  flex-basis: 100%;
+  }
+  .link-title {
+    flex-basis: 50%;
+    margin-bottom: 30px;
+  }
 }
